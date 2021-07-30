@@ -1,0 +1,330 @@
+:root {
+  --app-color              : #EBEDED;
+  --theme-color            : #7acaed;
+  --panel-background-color : #22252E;
+  --app-background-color   : #3a3d46;
+  --hightide-0             : #7abee5;
+  --hightide-30            : #f8e35b;
+  --hightide-90            : #f38449;
+  --hightide-180           : #d63229;
+}
+
+html,
+body {
+  margin                   : 0;
+  padding                  : 0;
+  width                    : 100%;
+  height                   : 100%;
+  font-size                : 100%;
+  letter-spacing           : 0.15rem;
+  -webkit-text-size-adjust : 100%;
+  -moz-text-size-adjust    : 100%;
+  -ms-text-size-adjust     : 100%;
+  font-family              : 'Avenir Next LT Pro', 'Avenir Next', 'Helvetica Nue', sans-serif;
+}
+
+body {
+  display          : flex;
+  flex-direction   : column;
+  color            : var(--app-color);
+  background-color : var(--app-background-color);
+}
+
+*:focus {
+  outline : none;
+}
+
+.modal-content {
+  background-color : var(--panel-background-color);
+}
+
+.content-row,
+.modal-content-row {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : space-between;
+  align-items     : center;
+}
+
+.panel {
+  border           : none;
+  color            : var(--app-color);
+  background-color : var(--app-background-color);
+}
+
+.panel:after {
+  content : unset;
+}
+
+/*
+.panel,
+.panel * {
+  border : solid 1px ghostwhite;
+}
+*/
+
+.panel-theme {
+  color            : var(--theme-color) !important;
+  background-color : var(--panel-background-color) !important;
+}
+
+.text-app {
+  color : var(--app-color);
+}
+
+.text-theme {
+  color : var(--theme-color);
+}
+
+.small-letter-spacing {
+  letter-spacing : 0.1rem;
+}
+
+.no-letter-spacing {
+  letter-spacing : 0 !important;
+}
+
+#app-details-panel a {
+  color : var(--theme-color) !important;
+}
+
+#header-panel {
+  flex-shrink      : 0;
+  flex-grow        : 0;
+  min-width        : 0;
+  min-height       : 0;
+  z-index          : 99;
+  background-color : var(--panel-background-color) !important;
+  box-shadow       : 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.top-nav-link:hover, .top-nav-link:focus {
+  color               : var(--app-color);
+  border-bottom-color : var(--app-color);
+}
+
+#main-container {
+  flex-shrink    : 1;
+  flex-grow      : 1;
+  min-width      : 0;
+  min-height     : 0;
+  display        : flex;
+  flex-direction : row;
+}
+
+#top-container {
+  flex-shrink    : 0;
+  flex-grow      : 0;
+  min-width      : 0;
+  min-height     : 0;
+  display        : flex;
+  flex-direction : column;
+}
+
+#bottom-container {
+  flex-shrink    : 1;
+  flex-grow      : 1;
+  min-width      : 0;
+  min-height     : 0;
+  display        : flex;
+  flex-direction : column;
+}
+
+#views-container {
+  flex-shrink           : 1;
+  flex-grow             : 1;
+  min-width             : 0;
+  min-height            : 0;
+  display               : grid;
+  grid-template-columns : repeat(3, 1fr);
+  grid-template-rows    : repeat(2, 1fr);
+  grid-auto-flow        : row dense;
+  column-gap            : 10px;
+  row-gap               : 10px;
+}
+
+.view-panel {
+  display     : flex;
+  flex-shrink : 1;
+  flex-grow   : 1;
+  min-width   : 0;
+  min-height  : 0;
+  box-shadow  : 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.title-panel {
+  position : relative;
+  top      : 0;
+  left     : 0;
+  padding  : 4px 8px;
+}
+
+#side-container {
+  flex-shrink     : 0;
+  flex-grow       : 0;
+  min-width       : 0;
+  min-height      : 0;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+}
+
+#chart-panel {
+  flex-shrink     : 1;
+  flex-grow       : 1;
+  min-width       : 0;
+  min-height      : 0;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+  position        : relative;
+}
+
+#flood-days-chart-container {
+  flex-shrink : 1;
+  flex-grow   : 1;
+  min-width   : 0;
+  min-height  : 0;
+}
+
+#flood-days-chart-node {
+  width          : 100%;
+  height         : 100%;
+  letter-spacing : 0 !important;
+}
+
+.esri-time-slider__time-extent,
+.esri-time-slider__min,
+.esri-time-slider__max {
+  display : none !important;
+}
+
+.esri-time-slider__slider,
+.esri-time-slider__slider .esri-slider {
+  background-color : var(--panel-background-color)
+}
+
+.esri-slider__track {
+  background-color : var(--app-color);
+}
+
+.esri-slider__thumb {
+  border           : 2px solid var(--app-color);
+  background-color : var(--panel-background-color);
+}
+
+.esri-slider__thumb:hover,
+.esri-slider__anchor--moving:focus .esri-slider__thumb {
+  border : 2px solid var(--theme-color);
+}
+
+.esri-widget--button {
+  color            : var(--app-color) !important;
+  background-color : var(--panel-background-color) !important;
+}
+
+/*.esri-attribution {
+  color            : #fff !important;
+  background-color : rgba(0, 121, 193, 0.5) !important;
+}
+
+.esri-attribution:hover {
+  background-color : rgba(0, 121, 193, 0.8) !important;
+}*/
+
+.loader {
+  z-index  : 99;
+  position : absolute;
+  top      : calc(50% - 50px);
+  left     : calc(50% - 50px);
+}
+
+.loader-text {
+  color       : var(--app-color) !important;
+  padding-top : 3em !important;
+}
+
+@keyframes load {
+  0%, 80%, 100% {
+    opacity    : .75;
+    box-shadow : 0 0 var(--theme-color);
+    height     : 2rem
+  }
+
+  40% {
+    opacity    : 1;
+    box-shadow : 0 -0.5rem var(--theme-color);
+    height     : 2.5rem
+  }
+}
+
+.loader-bars:before,
+.loader-bars:after,
+.loader-bars {
+  background : var(--theme-color);
+}
+
+#station-label {
+  font-family    : 'Avenir Next LT Pro Light', sans-serif;
+  pointer-events : none;
+  line-height    : 2rem;
+  color          : var(--theme-color) !important;
+}
+
+#station-label:empty {
+  font-family : 'Avenir Next LT Pro', sans-serif;
+  font-size   : 9pt;
+}
+
+#station-label:empty:after {
+  content : "CLICK ON A CITY IN ANY MAP TO VIEW HIGH TIDE FLOODING DETAILS...";
+}
+
+.hightide-legend-label {
+  margin-right : 2px;
+  font-size    : 9pt;
+}
+
+.hightide-legend-label:last-of-type {
+  margin-right : 0;
+}
+
+.hightide-legend-label[data-days="180"] {
+  color : var(--hightide-180);
+}
+
+.hightide-legend-label[data-days="90"] {
+  color : var(--hightide-90);
+}
+
+.hightide-legend-label[data-days="30"] {
+  color : var(--hightide-30);
+}
+
+.hightide-legend-label[data-days="0"] {
+  color : var(--hightide-0);
+}
+
+#bookmarks-panel {
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-around;
+}
+
+#bookmarks-panel .btn {
+  margin     : 4px 0 4px 0;
+  color      : var(--app-color);
+  background : var(--panel-background-color);
+}
+
+#bookmarks-panel .btn:hover {
+  color : var(--theme-color);
+}
+
+#share-panel {
+  position    : absolute;
+  top         : 70px;
+  right       : 8px;
+  border-left : solid 6px var(--theme-color);
+  box-shadow  : 0 1px 2px rgba(0, 0, 0, 0.3);
+}

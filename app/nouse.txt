@@ -1,0 +1,100 @@
+/*initializeHighTideRenderer: function(){
+
+// FLOODED DAYS FIELD INFO //
+this.getFloodDaysFieldInfo = (layer) => {
+  return layer.popupTemplate.fieldInfos.find(fi => (fi.label === 'Flood Days per Year'));
+};
+
+// HIGH TIDE RENDERER //
+const createHighTideRenderer = (layer, floodDaysFieldName) => {
+  return {
+    type: "class-breaks",
+    field: floodDaysFieldName,
+    classBreakInfos: [
+      {
+        label: "less than 30",
+        symbol: {
+          type: "simple-marker",
+          size: 4,
+          color: '#2b53a5',
+          outline: {
+            width: 10,
+            color: 'rgba(43,83,165,0.5)'
+          }
+        },
+        minValue: 0,
+        maxValue: 30
+      },
+      {
+        label: "greater than 30",
+        symbol: {
+          type: "simple-marker",
+          size: 8,
+          color: '#f0d711',
+          outline: {
+            width: 10,
+            color: 'rgba(240,214,19,0.5)'
+          }
+        },
+        minValue: 30,
+        maxValue: 90
+      },
+      {
+        label: "greater than 90",
+        symbol: {
+          type: "simple-marker",
+          size: 12,
+          color: '#ef8821',
+          outline: {
+            width: 10,
+            color: 'rgba(237,135,33,0.5)'
+          }
+        },
+        minValue: 90,
+        maxValue: 180
+      },
+      {
+        label: "greater than 180",
+        symbol: {
+          type: "simple-marker",
+          size: 16,
+          color: '#e92924',
+          outline: {
+            width: 10,
+            color: 'rgba(232,40,37,0.5)'
+          }
+        },
+        minValue: 180,
+        maxValue: 365
+      }
+    ]
+  }
+};
+
+// HIGH TIDE LABELS //
+const createHighTideLabels = (layer, floodDaysFieldName) => {
+  return [
+    {
+      labelExpressionInfo: { expression: `$feature.${floodDaysFieldName}` },
+      labelPlacement: 'center-center',
+      symbol: {
+        type: "text",
+        color: "#ffffff",
+        haloSize: 2,
+        haloColor: "#242424",
+        font: { size: 5, weight: "bold" }
+      }
+    }
+  ]
+};
+
+this.configureHighTideRenderer = (scenarioLayer) => {
+  const floodDaysFieldInfo = this.getFloodDaysFieldInfo(scenarioLayer);
+  scenarioLayer.renderer = createHighTideRenderer(scenarioLayer, floodDaysFieldInfo.fieldName);
+  // scenarioLayer.labelingInfo = createHighTideLabels(scenarioLayer, floodDaysFieldInfo.fieldName);
+  // scenarioLayer.labelsVisible = true;
+  // scenarioLayer.opacity = 0.5;
+  //console.info(scenarioLayer.labelingInfo[0]);
+};
+
+},*/

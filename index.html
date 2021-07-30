@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- End Responsive -->
+    <link rel="icon" href="./assets/favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.5/css/calcite-web-dark.min.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/dark/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./app/dojo.js"></script>
+    <script src="https://js.arcgis.com/4.18/"></script>
+    <script>require(["Application/init"]);</script>
+  </head>
+  <body class="">
+
+    <!-- DETAILS -->
+    <div class="js-modal modal-overlay" data-modal="app-details-dialog">
+      <div class="modal-content column-17" aria-labelledby="modal" role="dialog">
+        <div class="modal-content-row trailer-half">
+          <div class="app-title font-size-2"></div>
+          <div class="js-modal-toggle esri-interactive icon-ui-close" aria-label="close-modal"></div>
+        </div>
+        <div id="app-details-panel" class="panel font-size-0 no-letter-spacing"></div>
+        <div class="modal-content-row leader-1">
+          <img src="./assets/esri_science_of_where_white.png" class="left">
+          <div class="modal-content-row">
+            <label class="modal-content-row trailer-0 margin-right-1">
+              <div class="inline-block font-size--2 no-letter-spacing">Hide on startup&nbsp;</div>
+              <input id="hide-startup-input" type="checkbox" style="vertical-align:middle;">
+            </label>
+            <button class="btn btn-white js-modal-toggle">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOP NAVIGATION -->
+    <header id="header-panel" class="content-row padding-left-1 padding-right-1">
+      <!-- APP TITLE -->
+      <span id="app-title-node" class="app-title top-nav-title text-app"></span>
+      <!-- RIGHT ALIGNED -->
+      <nav class="top-nav-list content-row" role="navigation">
+        <!-- SHARE -->
+        <div id="share-link" class="top-nav-link btn-link text-app icon-ui-link" title="share current options..."></div>
+        <!-- APP DETAILS -->
+        <span class="top-nav-link btn-link icon-ui-description js-modal-toggle margin-left-1 text-app esri-interactive" title="application details..." data-modal="app-details-dialog"></span>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div id="main-container">
+
+      <div id="bottom-container" class="panel panel-no-padding">
+
+        <div id="station-panel" class="panel content-row">
+          <div class="column-2"></div>
+          <div id="station-label" class="font-size-4"></div>
+          <div class="content-row">
+            <div id="zoom-btn" class="btn-link text-app font-size--3 small-letter-spacing btn-disabled" title="zoom to selected station...">ZOOM TO</div>
+            <span class="font-size--3">&nbsp;|&nbsp;</span>
+            <div id="reset-btn" class="btn-link text-app font-size--3 small-letter-spacing" title="zoom to initial extent and clear selected station...">RESET</div>
+          </div>
+        </div>
+
+        <div id="views-container" class="panel leader-0 padding-leader-0 padding-trailer-0"></div>
+
+        <div id="top-container" class="panel padding-leader-000">
+          <div id="slider-container"></div>
+        </div>
+
+      </div>
+
+      <div id="side-container" class="padding-left-quarter padding-right-1 column-7">
+
+        <div id="chart-panel" class="panel panel-theme leader-1 margin-right-quarter">
+          <div id="flood-days-label" class="font-size-1 text-center text-theme trailer-quarter">FLOOD DAYS PER YEAR</div>
+          <div id="flood-days-chart-container">
+            <canvas id="flood-days-chart-node"></canvas>
+          </div>
+          <div class="text-center text-app font-size-0 leader-half">HOW MANY DAYS WILL IT FLOOD?</div>
+          <div class="text-center">
+            <span class="hightide-legend-label" data-days="0">0-30 DAYS</span>
+            <span class="hightide-legend-label" data-days="30">~1 MONTH</span>
+            <span class="hightide-legend-label" data-days="90">~3 MONTH</span>
+            <span class="hightide-legend-label" data-days="180">~6 MONTH</span>
+          </div>
+        </div>
+
+        <div id="bookmarks-panel" class="panel padding-left-2 padding-right-2"></div>
+
+      </div>
+    </div>
+
+    <div id="share-panel" class="panel panel-theme column-6 hide">
+      <div class="text-app font-size--2 no-letter-spacing">Shareable link has been copied to the clipboard.</div>
+    </div>
+
+  </body>
+</html>
