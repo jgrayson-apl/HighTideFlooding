@@ -22,7 +22,7 @@ For questions about [Ocean related content](https://livingatlas.arcgis.com/en/br
 > Esri | 8615 Westwood Center Dr., Vienna, VA 22182\
 > Phone: 703-506-9515 Ext. 1-6601\
 > Mobile: 909-663-4707\
-> Email: [kvangraafeiland@esri.com]()
+> Email: [kvangraafeiland@esri.com](mailto:kvangraafeiland@esri.com?subject=High%20Tide%20Flooding&body=Hi%20Keith,%0A%20%20I%20have%20a%20quesiton%20about%20the%20High%20Tide%20Flooding%20demo.)
 
 For questions about the application UX design:
 
@@ -30,7 +30,7 @@ For questions about the application UX design:
 > Cartographer | Living Atlas of the World\
 > Esri | 380 New York St | Redlands, CA 92373 | USA\
 > v 909 793 2853 x 2460 | m 909 557 7326\
-> [EMeriam@esri.com]() | [livingatlas.arcgis.com](https://livingatlas.arcgis.com/)
+> [EMeriam@esri.com](mailto:EMeriam@esri.com?subject=High%20Tide%20Flooding&body=Hi%20Emily,%0A%20%20I%20have%20a%20quesiton%20about%20the%20High%20Tide%20Flooding%20demo.) | [livingatlas.arcgis.com](https://livingatlas.arcgis.com/)
 
 
 
