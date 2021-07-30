@@ -1,4 +1,5 @@
 # High Tide Flooding
+
 ###US High Tide Flooding Probability Scenarios Through 2100
 
 High tide flooding today mostly affects low-lying and exposed assets or infrastructure, such as roads, harbors, beaches, public storm-, waste- and fresh-water systems and private and commercial properties.  Due to rising relative sea level (RSL), more and more cities are becoming increasingly exposed and evermore vulnerable to high tide flooding, which is rapidly increasing in frequency, depth and extent along many U.S. coastlines. Today, high tide flooding is likely more disruptive (a nuisance) than damaging. The cumulative effects, however, are becoming a serious problem in several locations including many with strategic importance to national security such as Norfolk, Virginia, San Diego, California and Kwajalein Island in the U.S. Marshall Islands.
